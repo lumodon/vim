@@ -3,8 +3,8 @@ mv .gitconfig "$HOME/"
 mv .gitignore_global "$HOME/"
 mkdir -p "$HOME/bin"
 mv diff-so-fancy "$HOME/bin/"
-mv .bash-profile "$HOME/.bash-profile"
-echo "source .bash-profile" >> "$HOME/.bashrc"
+mv .bash_profile "$HOME/.bash_profile"
+echo "source .bash_profile" >> "$HOME/.bashrc"
 mv .vim "$HOME/.vim"
 sudo apt install -y npm
 sudo add-apt-repository ppa:neovim-ppa/unstable
