@@ -4,7 +4,7 @@ cp .gitignore_global "$HOME/"
 mkdir -p "$HOME/bin"
 cp diff-so-fancy "$HOME/bin/"
 cp .bash_profile "$HOME/.bash_profile"
-echo "source .bash_profile" >> "$HOME/.bashrc"
+echo "source \"$HOME/.bash_profile\"" >> "$HOME/.bashrc"
 cp .vim "$HOME/.vim"
 sudo apt install -y npm
 sudo add-apt-repository ppa:neovim-ppa/unstable
