@@ -10,7 +10,6 @@ sudo apt-get update -y
 sudo apt-get install -y neovim
 sudo apt install -y python3-pip
 pip3 install neovim
-nvim -c ":PlugInstall"
-nvim -c ":PlugClean"
-nvim -c ":PlugInstall"
-echo "alias vim=\"nvim\"" >> .bash-profile
+nvim -c ":call mkdir(stdpath('config'), 'p')"
+nvim -c ":exe 'edit '.stdpath('config').'/init.vim'"
+
