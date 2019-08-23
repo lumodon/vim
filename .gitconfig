@@ -1,0 +1,12 @@
+[user]
+	email = leaf466@gmail.com
+	name = Serafin Wesnidge
+[core]
+	editor = nvim
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	excludesfile = /Users/user386/.gitignore_global
+[push]
+	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 

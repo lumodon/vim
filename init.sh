@@ -1,4 +1,6 @@
 #!/bin/sh
+mv .gitconfig "$HOME/"
+mv .gitignore_global "$HOME/"
 mkdir -p "$HOME/bin"
 mv diff-so-fancy "$HOME/bin/"
 mv .bash-profile "$HOME/.bash-profile"

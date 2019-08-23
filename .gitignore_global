@@ -1,0 +1,14 @@
+*.log
+.env
+.vscode/
+.vscode
+venv/
+.DS_Store
+_DEV
+_DEV/
+_DEV/*
+node_modules
+node_modules/*
+node_modules/
+node_modules/.
+.sass-cache
