@@ -12,6 +12,6 @@ sudo apt-get update -y
 sudo apt-get install -y neovim
 sudo apt install -y python3-pip
 pip3 install neovim
-nvim -c ":call mkdir(stdpath('config'), 'p')"
+nvim -c ":call mkdir(stdpath('config'), 'p') | quit"
 nvim -c ":exe 'edit '.stdpath('config').'/init.vim'"
 

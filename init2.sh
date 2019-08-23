@@ -1,6 +1,4 @@
 #!/bin/sh
-nvim -c ":PlugInstall"
-nvim -c ":PlugClean"
-nvim -c ":PlugInstall"
+nvim -c ":PlugInstall | :PlugClean | :PlugInstall | quit"
 echo "alias vim=\"nvim\"" >> .bash-profile
 
