@@ -1,5 +1,16 @@
 PAGER="less -SF"
 
+function git_current_branch() {
+  local ref
+  ref=$(command git symbolic-ref --quiet HEAD 2> /dev/null)
+  local ret=$?
+  if [[ $ret != 0 ]]; then
+    [[ $ret == 128 ]] && return  # no git repo.
+    ref=$(command git rev-parse --short HEAD 2> /dev/null) || return
+  fi
+  echo ${ref#refs/heads/}
+}
+
 # Oh-My-Zsh aliases
 alias ..="cd .."
 alias ...="cd ../.."
@@ -28,6 +39,7 @@ alias gst="git status"
 
 alias gtracked="git log --pretty=format: --name-only --diff-filter=A | sort - | sed '/^$/d'"
 alias pyinit="python3 -m venv venv"
+alias lsa="ls -lah"
 
 alias gitprotect="git ls-files --others --exclude-standard -z | xargs -0 tar czvf ~/backup-untracked.tar"
 alias dnsconfig="sudo vim /usr/local/etc/dnsmasq.conf"
