@@ -1,4 +1,5 @@
 PAGER="less -SF"
+EDITOR="vim"
 force_color_prompt=yes
 
 # Git branch in prompt.
