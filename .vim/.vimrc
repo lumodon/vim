@@ -197,3 +197,7 @@ hi User2 ctermfg=236 ctermbg=236 guibg=#504945 guifg=#d5c4a1
 exec "set listchars=tab:\uBB\uBB,trail:\uD7,nbsp:~"
 set list
 
+if &shell =~# 'fish$'
+    set shell=sh
+endif
+
