@@ -11,6 +11,14 @@ if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
 fi
 
+function aescrypt() {
+    tar cz "$1" | openssl enc -aes-256-cbc -e > "$1.tar.gz.enc"
+}
+
+function aesdecrypt() {
+    openssl enc -aes-256-cbc -d -in "$1" | tar xz
+}
+
 function current_branch() {
   local ref
   ref=$(command git symbolic-ref --quiet HEAD 2> /dev/null)
